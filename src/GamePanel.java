@@ -35,8 +35,13 @@ public class GamePanel extends JPanel implements ActionListener, MouseListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        for (Ball ball : balls) {
-            ball.update(getWidth(), getHeight());
+        for (int i = 0; i < balls.size(); i++) {
+            Ball ball1 = balls.get(i);
+            ball1.update(getWidth(), getHeight());
+            for (int j = i + 1; j < balls.size(); j++) {
+                Ball ball2 = balls.get(j);
+                ball1.resolveCollision(ball2);
+            }
         }
         repaint();
     }
