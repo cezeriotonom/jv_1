@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.Graphics;
+import java.util.Random;
 
 public class Ball {
     private int x, y;
@@ -8,14 +9,19 @@ public class Ball {
     private Color color;
     private static final double GRAVITY = 0.4;
     private static final double DAMPING = 0.80;
+    private static final Random rand = new Random();
 
-    public Ball(int x, int y, int radius, Color color) {
+    public Ball(int x, int y, int radius) {
         this.x = x;
         this.y = y;
         this.radius = radius;
-        this.color = color;
-        this.dx = 0; // initially no horizontal velocity
-        this.dy = 1; // initially small downward velocity
+        
+        // Random initial horizontal velocity
+        this.dx = rand.nextInt(7) - 3;
+        this.dy = 1; // a little push to start
+        
+        // Random color
+        this.color = new Color(rand.nextInt(256), rand.nextInt(256), rand.nextInt(256));
     }
 
     public void update(int panelWidth, int panelHeight) {
