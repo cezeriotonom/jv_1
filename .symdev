@@ -1,0 +1,12 @@
+{
+  "project_id" : 579,
+  "project_name" : "jv_1",
+  "language" : "JAVA",
+  "ai_chat_id" : "1H6tjkdeLjbujh5FP0yJ_-u25vP_xU9Uk",
+  "symdev_account_email" : "cezeriotonom@gmail.com",
+  "llm_account_email" : "symdev.basic@gmail.com",
+  "github_repo_url" : "https://github.com/cezeriotonom/jv_1.git",
+  "build_command" : "javac src\\*.java",
+  "run_command" : "java -cp src HelloWorldGUI",
+  "open_browser_url" : null
+}
